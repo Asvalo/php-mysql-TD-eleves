@@ -38,7 +38,7 @@ INSERT INTO famille_tbl VALUES( '', 'Dupond', 'Manon', 'Fille', '1990-11-29');
 
 « Dupond Manon (Fille), date de naissance : 1990-11-29 »
 
-#### 2.1- Affichage des résultats par ordre alphabétique de prénom.
+#### 1.2- Affichage des résultats par ordre alphabétique de prénom.
 « L'opérateur ORDER BY permet de classer soit alphabétiquement soit numériquement suivant le type du champ. »
 
 « Si l'on souhaite classer en décroissant (ex. de Z à A), nous  y ajouterons DESC soit : ORDER BY prenom DESC »
@@ -57,7 +57,7 @@ Résultat attendu :
 
 « Dupond Marie (Mère), date de naissance : 1961-03-02 »
 
-### 3.1-Affichage des résultats par comparaison de date.
+### 1.3-Affichage des résultats par comparaison de date.
 L'avantage d'avoir un type DATE dans notre base de données, c'est que nous pouvons comparer des dates dans la requête SQL.
 
 Ici nous ne souhaitons afficher que les membres de la famille qui sont nés avant le 1er janvier 1960, soit : WHERE date<'1960-01-01'

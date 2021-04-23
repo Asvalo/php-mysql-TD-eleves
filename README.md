@@ -109,7 +109,6 @@ Travail à faire :
    - suppression d'un PC
    - mise à jour d'un PC
    - vérifier si des PC sélectionnés peuvent communiquer
-   - [Ressource : une base pour ceux qui n'ont pas réussi TD2](/#)
 
 ### Attention :
 Toutes vos productions doivent être rendues sur eLyco.

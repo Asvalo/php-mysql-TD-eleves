@@ -57,7 +57,7 @@ Résultat attendu :
 
 « Dupond Marie (Mère), date de naissance : 1961-03-02 »
 
-### 1.3-Affichage des résultats par comparaison de date.
+#### 1.3-Affichage des résultats par comparaison de date.
 L'avantage d'avoir un type DATE dans notre base de données, c'est que nous pouvons comparer des dates dans la requête SQL.
 
 Ici nous ne souhaitons afficher que les membres de la famille qui sont nés avant le 1er janvier 1960, soit : WHERE date<'1960-01-01'

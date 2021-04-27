@@ -61,7 +61,7 @@ INSERT INTO famille_tbl VALUES( '', 'Dupond', 'Manon', 'Fille', '1990-11-29');
  }
 
 ```
-  Le programme doit donner le résultat suivant :
+  Le programme doit afficher :
 
 « Dupond Grégoire (Grand-père), date de naissance : 1932-05-17 »
 

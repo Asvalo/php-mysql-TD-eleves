@@ -110,7 +110,6 @@ Travail à faire :
    - mise à jour d'un PC
    - vérifier si des PC sélectionnés peuvent communiquer
    - Travail attendu (les calculs réseaux n'y sont pas encore inclus):
-   - <img src="demo_td3b.gif" width=66% height=66%>
-
+   - <img src="demo_td3b.gif">
 ### Attention :
 Toutes vos productions doivent être rendues sur eLyco.

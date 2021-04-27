@@ -48,17 +48,17 @@ INSERT INTO famille_tbl VALUES( '', 'Dupond', 'Manon', 'Fille', '1990-11-29');
 <pre> Requête SQL : SELECT * FROM famille_tbl</pre>
 ```php
  echo "Q1: tous les éléments de la table sans condition:"."<br>"."<br>";
-	$sql = "SELECT * FROM famille_tbl";
-	$result = $conn->query($sql);
+ $sql = "SELECT * FROM famille_tbl";
+ $result = $conn->query($sql);
     
-    if ($result->num_rows > 0) {
-		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
-		}
-	} else {
-		echo "0 results";
+ if ($result->num_rows > 0) {
+	// output data of each row
+	while($row = $result->fetch_assoc()) {
+		echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
 	}
+ } else {
+	echo "0 results";
+ }
 
 ```
   Le programme doit donner le résultat suivant :
@@ -84,16 +84,16 @@ INSERT INTO famille_tbl VALUES( '', 'Dupond', 'Manon', 'Fille', '1990-11-29');
    echo "Q2: liste en ordre décroissant du prénom:"."<br>"."<br>";
     
     $sql = "SELECT * FROM famille_tbl ORDER BY prenom DESC";
-	$result = $conn->query($sql);
+    $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
-		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
-		}
-	} else {
-		echo "0 results";
+	// output data of each row
+	while($row = $result->fetch_assoc()) {
+		echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
 	}
+   } else {
+	echo "0 results";
+   }
 ```
 Résultat attendu :
 
@@ -118,16 +118,16 @@ Ici nous ne souhaitons afficher que les membres de la famille qui sont nés avan
   echo "Q3: liste avec les dates antérieures à 1960-01-01:"."<br>"."<br>";
     
     $sql = "SELECT * FROM famille_tbl WHERE date<'1960-01-01'";
-	$result = $conn->query($sql);
+    $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
 		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
-		}
-	} else {
-		echo "0 results";
+	while($row = $result->fetch_assoc()) {
+		echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
 	}
+    } else {
+	echo "0 results";
+    }
   ```
 
 

@@ -109,7 +109,7 @@ Travail à faire :
    - suppression d'un PC
    - mise à jour d'un PC
    - vérifier si des PC sélectionnés peuvent communiquer
-   - Travail attendu (les calculs réseaux n'y sont pas encore inclus):
+   - Eléments du travail attendu (les calculs réseaux n'y sont pas encore inclus):
    - <img src="demo_td3b.gif">
 ### Attention :
 Toutes vos productions doivent être rendues sur eLyco.

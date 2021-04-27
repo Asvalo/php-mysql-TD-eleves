@@ -23,7 +23,44 @@ INSERT INTO famille_tbl VALUES( '', 'Dupond', 'Julien', 'Fils', '1985-05-17');
 
 INSERT INTO famille_tbl VALUES( '', 'Dupond', 'Manon', 'Fille', '1990-11-29');
 
+### Accès et exploitation de la base donnée
+
+#### 1.0 Connexion à la base de donnée
+```php
+  $servername = "localhost";
+	$username = "";  // your personal username
+	$password = "";
+	$dbname = "tabl_famille";
+
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+  
+  $conn->set_charset('utf8');
+    
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	} 
+```
+
+
 #### 1.1- Affichage des résultats tels qu'ils sont dans la table sans condition.
+<pre> Requête SQL : SELECT * FROM famille_tbl</pre>
+```php
+ echo "Q1: tous les éléments de la table sans condition:"."<br>"."<br>";
+	$sql = "SELECT * FROM famille_tbl";
+	$result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
+		}
+	} else {
+		echo "0 results";
+	}
+
+```
   Le programme doit donner le résultat suivant :
 
 « Dupond Grégoire (Grand-père), date de naissance : 1932-05-17 »
@@ -42,7 +79,22 @@ INSERT INTO famille_tbl VALUES( '', 'Dupond', 'Manon', 'Fille', '1990-11-29');
 « L'opérateur ORDER BY permet de classer soit alphabétiquement soit numériquement suivant le type du champ. »
 
 « Si l'on souhaite classer en décroissant (ex. de Z à A), nous  y ajouterons DESC soit : ORDER BY prenom DESC »
-
+<pre> Requête SQL : SELECT * FROM famille_tbl ORDER BY prenom DESC </pre>
+```php
+   echo "Q2: liste en ordre décroissant du prénom:"."<br>"."<br>";
+    
+    $sql = "SELECT * FROM famille_tbl ORDER BY prenom DESC";
+	$result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
+		}
+	} else {
+		echo "0 results";
+	}
+```
 Résultat attendu :
 
 « Dupond Gérard (Père), date de naissance : 1959-12-22 »
@@ -62,6 +114,21 @@ L'avantage d'avoir un type DATE dans notre base de données, c'est que nous pouv
 
 Ici nous ne souhaitons afficher que les membres de la famille qui sont nés avant le 1er janvier 1960, soit : WHERE date<'1960-01-01'
 <pre>SELECT * FROM `famille_tbl` WHERE date<'1960-01-01' </pre>
+```php
+  echo "Q3: liste avec les dates antérieures à 1960-01-01:"."<br>"."<br>";
+    
+    $sql = "SELECT * FROM famille_tbl WHERE date<'1960-01-01'";
+	$result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo $row["nom"]. "  " . $row["prenom"]. "   (" . $row["statut"]."),    date de naissance : " . $row["date"]."<br>";
+		}
+	} else {
+		echo "0 results";
+	}
+  ```
 
 
 ## TD2 - Site dynamique de gestion de famille

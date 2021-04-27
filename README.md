@@ -151,7 +151,7 @@ l'ordre d'insertion avec les variables PHP :
 ```
 
 
-## TD 3 : portage de la version Réseau IP Javascript 
+## TD 3a : portage de la version Réseau IP Javascript 
 
 En apprenant les bases du langage Javascript, vous avez réalisé une application permettant de décrire les éléments d'un réseau IP à partir de l'adresse d'un hôte.
 
@@ -169,7 +169,8 @@ Travail à faire :
      - inclure un fichier php : include "nom_fichier.php";
      - portée des variables : [ce lien parmi d'autres](https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/portee-variable-fonction)
      - Insérer une variable php dans html :  ``` <?php echo $nom_variable; ?> ``` 
-- TD3b : Ecrire un site qui permet de gérer le parc informatique (uniquement les PC) du lycée Réaumur
+     
+## TD3b : Ecrire un site qui permet de gérer le parc informatique (uniquement les PC) du lycée Réaumur
    - Pour chaque PC : Référence, Numéro de salle, Adresse MAC, IP/masque, l'adresse réseau, l'adresse de diffusion
    - consultation (par critères divers) : pour chaque PC afficher les caractéristiques du réseau correspondant
    - ajout d'un PC
